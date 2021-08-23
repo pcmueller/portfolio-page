@@ -1,9 +1,7 @@
-import './App.css';
-
 function App() {
   return (
     <div className="App">
-
+      PETE'S CODE PARTY
     </div>
   );
 }
