@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, NavLink, BrowserRouter as Router } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div className="app">
@@ -9,7 +9,7 @@ function App() {
             <div></div>
             <div className='app-title-container'>
               <NavLink to='/' className='home-link'>
-                <h1 className='app-title'>Pete's Code Party</h1>
+                <h1 className='app-title'>Pete's Wacky Code Party</h1>
               </NavLink>
             </div>
           </header>
