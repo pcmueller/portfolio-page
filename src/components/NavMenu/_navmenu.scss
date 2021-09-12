@@ -57,6 +57,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Wrapper for item list */
 .bm-item-list {
+  display: flex;
+  flex-direction: column;
   color: #b8b7ad;
   padding: 0.8em;
 }
@@ -64,6 +66,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Individual item */
 .bm-item {
   display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  margin: 1em auto 1em auto;
 }
 
 /* Styling of overlay */

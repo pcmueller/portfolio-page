@@ -3,10 +3,6 @@ import { push as Menu } from 'react-burger-menu';
 
 const NavMenu = () => {
 
-  const showSettings = (event) => {
-    event.preventDefault();
-  }
-
   return (
     <Menu 
       pageWrapId={'page-wrap'} 
@@ -14,9 +10,9 @@ const NavMenu = () => {
       className={'burger-menu'}
     >
       <a id='home' className='menu-item' href='/'>Home</a>
-      <a id='about' className='menu-item' href='/about'>About</a>
-      <a id='contact' className='menu-item' href='/contact'>Contact</a>
-      <a onClick={(e) => showSettings(e)} className='menu-item--small' href='/'>Settings</a>
+      <a id='about' className='menu-item' href='/'>About</a>
+      <a id='portfolio' className='menu-item' href='/'>Portfolio</a>
+      <a id='contact' className='menu-item' href='/'>Contact</a>
     </Menu>
   )
 }
