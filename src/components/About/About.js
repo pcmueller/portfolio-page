@@ -1,11 +1,11 @@
 import React from 'react';
-import NavBar from '../NavBar/NavBar';
+import NavMenu from '../NavMenu/NavMenu';
 
 const About = () => {
 
   return (
     <main className='about-page' id='outer-container'>
-      <NavBar/>
+      <NavMenu/>
       <section className='about-container' id="page-wrap">
         <div className='banner'>BANNER</div>
         <h1 className='about-title'>ABOUT ME</h1>

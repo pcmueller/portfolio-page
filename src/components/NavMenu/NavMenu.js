@@ -1,7 +1,7 @@
 import React from 'react';
 import { push as Menu } from 'react-burger-menu';
 
-const NavBar = () => {
+const NavMenu = () => {
 
   const showSettings = (event) => {
     event.preventDefault();
@@ -21,4 +21,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar;
+export default NavMenu;
