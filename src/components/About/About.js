@@ -4,8 +4,8 @@ import NavBar from '../NavBar/NavBar';
 const About = () => {
 
   return (
-    <main className='about-page'>
-      <NavBar></NavBar>
+    <main className='about-page' pageWrapId={ "page-wrap" }>
+      <NavBar/>
       <div className='banner'>BANNER</div>
       <section className='about-container'>
         <h1 className='about-title'>ABOUT ME</h1>
