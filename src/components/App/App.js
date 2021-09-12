@@ -5,9 +5,9 @@ import About from '../About/About';
 const App = () => {
   return (
     <Router>
-      <div className="app">
+      <div className='app'>
         <Route exact path='/'>
-          <About />
+          <About/>
         </Route>
       </div>
     </Router>

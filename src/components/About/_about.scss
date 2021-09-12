@@ -8,7 +8,7 @@
   @include flex-center(row);
   width: 80%;
   height: 20%;
-  margin: 20px auto 30px auto;
+  margin: 2em auto 1em auto;
   font-size: 3em;
   color: green;
   background-color: black;
@@ -23,7 +23,7 @@
   justify-content: space-around;
   width: 80%;
   height: auto;
-  border: 1px dotted red;
+  // border: 1px dotted red;
 }
 
 .about-title {
