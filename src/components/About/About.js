@@ -4,10 +4,10 @@ import NavBar from '../NavBar/NavBar';
 const About = () => {
 
   return (
-    <main className='about-page' pageWrapId={ "page-wrap" }>
+    <main className='about-page' id='outer-container'>
       <NavBar/>
-      <div className='banner'>BANNER</div>
-      <section className='about-container'>
+      <section className='about-container' id="page-wrap">
+        <div className='banner'>BANNER</div>
         <h1 className='about-title'>ABOUT ME</h1>
         <article className='about-section'>
           <div className='about-top'>
