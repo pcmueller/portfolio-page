@@ -31,7 +31,7 @@ const Landing = () => {
     drawLines();
   };
   return (
-    <main className='landing-page' style={{"background":"url(images/VHS_Noise_Pack/2.png)"}}>
+    <main className='landing-page' style={{"background":"url(images/VHS_Noise_Pack/2.png)", "width":"100vw", "height":"100vh", "backgroundSize":"cover"}}>
       LANDING PAGE
     </main>
   )
