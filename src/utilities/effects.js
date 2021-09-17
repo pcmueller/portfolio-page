@@ -1,20 +1,22 @@
 const vhsEffect = () => {
 
-  function getHeight() {
+  drawLines();
+
+  function getHeight(){
     return window.innerHeight
-  || document.documentElement.clientHeight
-  || document.body.clientHeight;
+    || document.documentElement.clientHeight
+    || document.body.clientHeight;
   }
 
-  function drawLines() {
+  function drawLines(){
     const lines = document.getElementsByClassName('line');
-    if (lines.length) {
+    if(lines.length) {
       for (let i = 0; i < lines.length; i++) {
           document.body.removeChild(lines[i]);
       }
     }
     
-    for (let i = 0; i < getHeight()/10; i++) {
+    for (let i = 0; i < getHeight()/10; i++){
       const line = document.createElement("div");  
       line.className = `line line-${i}`;
       line.style.top = `${i * 10}px`;
@@ -24,11 +26,9 @@ const vhsEffect = () => {
     }
   }
 
-  window.onresize = function() {
+  window.onresize = function(event) {
     drawLines();
   };
-
-  drawLines();
 }
 
 export default vhsEffect;
