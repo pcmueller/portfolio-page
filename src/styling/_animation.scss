@@ -109,9 +109,10 @@ body {
 
 .line {
   position: absolute;
-  left: 0;
+  top: 2em;
+  left: 3em;
   right: 0;
-  width: 100%;
+  width: 55%;
   height: 1px;
   background: blue;
   mix-blend-mode: screen;

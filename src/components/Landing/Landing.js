@@ -19,12 +19,14 @@ const Landing = () => {
     }
     
     for(let i = 0; i < getHeight()/10; i++){
-      const line = document.createElement("div");  
+      const line = document.createElement("div");
+      const screen = document.getElementsByClassName('screen');
+      console.log(screen);
       line.className = `line line-${i}`;
       line.style.top = `${i * 10}px`;
       const time = Math.random() * 5;
       line.style.animation = `lines ${time}s infinite`;
-      document.body.appendChild(line) ;
+      // screen.append(line) ;
     }
   }
 
@@ -35,9 +37,8 @@ const Landing = () => {
   return (
     <main 
       className='landing-page' 
-      style={{"background":"url(images/tube-tv.png)", "width":"100vw", "height":"100vh", "backgroundSize":"cover"}}
       >
-        <div className='container'>
+        <div className='screen'>
           <p className='glitch'>WELCOME TO</p>
           <p className='glitch'>PETE CODES</p>
         </div>
