@@ -37,7 +37,7 @@ const About = () => {
                 Test-Driven Development
                 RESTful API fetching
                 Project management
-                Modular project architecture
+                Modular project architectures
                 Developer empathy
                 Responsive UI design
                 User accessibility

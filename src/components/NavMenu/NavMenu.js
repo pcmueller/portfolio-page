@@ -11,8 +11,8 @@ const NavMenu = () => {
     >
       <a id='home' className='menu-item' href='/'>Home</a>
       <a id='about' className='menu-item' href='/about'>About</a>
-      <a id='portfolio' className='menu-item' href='/'>Portfolio</a>
-      <a id='contact' className='menu-item' href='/'>Contact</a>
+      <a id='portfolio' className='menu-item' href='/portfolio'>Portfolio</a>
+      <a id='contact' className='menu-item' href='/contact'>Contact</a>
     </Menu>
   )
 }
