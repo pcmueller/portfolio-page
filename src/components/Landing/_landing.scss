@@ -8,8 +8,6 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  font-size: 1.2em;
-  font-style: italic;
 }
 
 .screen {
@@ -21,9 +19,17 @@
   height: 100%;
   font-family: $bungee;
   font-weight: bold;
-  font-size: 80px;
+  font-style: italic;
+  font-size: 60px; // use for font size
 
-  p {
-    color: rgb(41, 203, 252);
+  p:nth-child(1) {
+    color: rgb(41, 168, 252);
+    font-size: 1em;
+  }
+
+  p:nth-child(2) {
+    color: rgb(59, 252, 41);
+    font-size: 2em;
+    margin-top: 20px;
   }
 }
