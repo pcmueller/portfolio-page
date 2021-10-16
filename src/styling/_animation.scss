@@ -50,29 +50,12 @@
 }
 
 $offset: 6px;
-$bgcolor: #111;
 
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-
-body {
-  background: $bgcolor;
-  font-family: 'Bungee', cursive;
-  text-transform: uppercase;
-  font-size: 80px;
-  font-weight: bold;
-  margin: 0;
-}
-
-// #root {
-  // position: absolute;
-  // top: 50%;
-  // @include transform(translateY(-50%) translateX(-50%));
-  // left: 50%;
-// }
 
 .glitch {
   left: -$offset;
@@ -107,40 +90,6 @@ body {
     color: limegreen;
   }
 }
-
-.line {
-  margin-top: 1.6em;
-  position: fixed;
-  width: 70vw;
-  height: 0.5px;
-  background: rgba(104, 127, 165, 0.76);
-  mix-blend-mode: screen;
-  -webkit-filter: blur(1px);
-  -moz-filter: blur(1px);
-  filter: blur(1px);
-
-  &:after,
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    mix-blend-mode: screen;
-  }
-
-  &:after {
-    top: 2px;
-    background: rgb(221, 216, 67);
-  }
-
-  &:before {
-    top: -2px;
-    background: rgb(218, 106, 241);
-  }
-}
-
-
 
 @include keyframes(skew) {
   0% {
@@ -197,15 +146,5 @@ body {
 
   50% {
     @include opacity(0.5)
-  }
-}
-
-@include keyframes(lines) {
-  0% {
-    @include opacity(0.1)
-  }
-
-  50% {
-    @include opacity(1)
   }
 }
