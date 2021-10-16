@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Landing = () => {
 
@@ -40,7 +41,11 @@ const Landing = () => {
     <main className='landing-page'>
         <div className='screen'>
           <p className='glitch'>WELCOME TO</p>
-          <p className='glitch'>PETE CODES</p>
+          <Link to={`/home`} 
+            className='enter-link'
+          >
+            <p className='glitch'>PETE CODES</p>
+          </Link>
         </div>
     </main>
   )

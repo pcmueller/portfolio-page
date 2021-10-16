@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Landing from '../Landing/Landing';
 import About from '../About/About';
 
@@ -7,12 +7,14 @@ const App = () => {
   return (
     <Router>
       <div className='app'>
-        <Route exact path='/home'>
-          <About/>
-        </Route>
-        <Route path='/'>
-          <Landing />
-        </Route>
+        <Switch>
+          <Route exact path='/home'>
+            <About/>
+          </Route>
+          <Route path='/'>
+            <Landing />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
