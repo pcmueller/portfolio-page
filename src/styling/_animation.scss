@@ -1,4 +1,4 @@
-@mixin vhs-effect($animate...) {
+@mixin animation($animate...) {
   $max: length($animate);
   $animations: '';
 
@@ -50,7 +50,6 @@
 }
 
 $offset: 6px;
-$bgcolor: #111;
 
 * {
   box-sizing: border-box;
@@ -58,33 +57,18 @@ $bgcolor: #111;
   -webkit-box-sizing: border-box;
 }
 
-body {
-  background: $bgcolor;
-  font-family: 'Bungee', cursive;
-  text-transform: uppercase;
-  font-size: 80px;
-  font-weight: bold;
-  margin: 0;
-}
-
-#root {
-  position: absolute;
-  top: 50%;
-  @include transform(translateY(-50%) translateX(-50%));
-  left: 50%;
-}
-
-#text {
-  top: 0;
+.glitch {
   left: -$offset;
-  color: red;
+  z-index: 1;
+  opacity: none;
+  color: rgba(0, 195, 255, 0.76);
   mix-blend-mode: screen;
   position: relative;
   white-space: nowrap;
   -webkit-filter: blur(1px);
   -moz-filter: blur(1px);
   filter: blur(1px);
-  @include vhs-effect('skew 2s infinite', 'flash .04s infinite');
+  @include animation('skew 2s infinite', 'flash .01s infinite');
 
   &:after,
   &:before {
@@ -97,7 +81,7 @@ body {
     top: 0;
     left: $offset;
     color: blue;
-    @include vhs-effect('move 1.5s infinite');
+    @include animation('move 1.5s infinite');
   }
 
   &:before {
@@ -106,41 +90,6 @@ body {
     color: limegreen;
   }
 }
-
-.line {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 1px;
-  background: blue;
-  mix-blend-mode: screen;
-  -webkit-filter: blur(1px);
-  -moz-filter: blur(1px);
-  filter: blur(1px);
-
-  &:after,
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    mix-blend-mode: screen;
-  }
-
-  &:after {
-    top: 2px;
-    background: red;
-  }
-
-  &:before {
-    top: -2px;
-    background: limegreen;
-  }
-}
-
-
 
 @include keyframes(skew) {
   0% {
@@ -197,15 +146,5 @@ body {
 
   50% {
     @include opacity(0.5)
-  }
-}
-
-@include keyframes(lines) {
-  0% {
-    @include opacity(0.1)
-  }
-
-  50% {
-    @include opacity(1)
   }
 }

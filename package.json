@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "gsap": "^3.7.1",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-burger-menu": "^3.0.6",
@@ -37,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gsap": "^3.7.1"
   }
 }

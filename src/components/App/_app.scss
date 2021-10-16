@@ -6,8 +6,8 @@
 html,
 body,
 #root {
-  height: 100%;
-  background-color: darkslategray;
+  // height: 100%;
+  width: 100%;
 }
 
 .app {
@@ -16,6 +16,7 @@ body,
   align-items: center;
   width: 100%;
   white-space: pre-line;
+  background-color: black;
 }
 
 .message-box {
