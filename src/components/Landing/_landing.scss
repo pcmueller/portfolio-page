@@ -1,28 +1,36 @@
 .landing-page {
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(
     rgba(0, 0, 0, .6), 
     rgba(0, 0, 0, .6)),
-    url('../../assets/images/tube-tv-1.png');
-  background-size: contain;
+    url('../../assets/images/VHS_Noise_Pack/vhs_noise_7.png');
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  font-size: 1.2em;
-  font-style: italic;
 }
 
 .screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 69vh;
-  width: 71vw;
-  margin-top: 1.5em;
-  margin-left: 1.7em;
+  @include flex-center(column);
+  width: 100%;
+  height: 100%;
   font-family: $bungee;
   font-weight: bold;
-  font-size: 80px;
+  font-style: italic;
+  font-size: 60px; // use for font size
+
+  p:nth-child(1) {
+    color: rgb(41, 168, 252);
+    font-size: 1em;
+  }
+}
+
+.enter-link {
+  text-decoration: none;
+  
+  p.glitch {
+    color: rgb(59, 252, 41);
+    font-size: 2em;
+    margin-top: 20px;
+  }
 }
