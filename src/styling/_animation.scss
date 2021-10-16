@@ -67,17 +67,18 @@ body {
   margin: 0;
 }
 
-#root {
-  position: absolute;
-  top: 50%;
-  @include transform(translateY(-50%) translateX(-50%));
-  left: 50%;
-}
+// #root {
+  // position: absolute;
+  // top: 50%;
+  // @include transform(translateY(-50%) translateX(-50%));
+  // left: 50%;
+// }
 
 .glitch {
-  top: 0;
   left: -$offset;
-  color: red;
+  z-index: 1;
+  opacity: none;
+  color: rgba(0, 195, 255, 0.76);
   mix-blend-mode: screen;
   position: relative;
   white-space: nowrap;
@@ -108,13 +109,11 @@ body {
 }
 
 .line {
-  position: absolute;
-  top: 2em;
-  left: 3em;
-  right: 0;
-  width: 55%;
-  height: 1px;
-  background: blue;
+  margin-top: 1.6em;
+  position: fixed;
+  width: 70vw;
+  height: 0.5px;
+  background: rgba(104, 127, 165, 0.76);
   mix-blend-mode: screen;
   -webkit-filter: blur(1px);
   -moz-filter: blur(1px);
@@ -132,12 +131,12 @@ body {
 
   &:after {
     top: 2px;
-    background: red;
+    background: rgb(221, 216, 67);
   }
 
   &:before {
     top: -2px;
-    background: limegreen;
+    background: rgb(218, 106, 241);
   }
 }
 

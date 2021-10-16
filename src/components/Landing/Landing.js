@@ -1,32 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Landing = () => {
 
-  drawLines();
+  const containerRef = useRef();
+  const { current } = containerRef;
 
-  function getHeight(){
-    return window.innerHeight
-  || document.documentElement.clientHeight
-  || document.body.clientHeight;
+  useEffect(drawLines, [current]);
+
+  function getHeight(screen){
+    return screen.innerHeight
+      || screen.clientHeight;
   }
 
-  function drawLines(){
+  function drawLines() {
+    let screen = document.querySelector('.screen');
+
     const lines = document.getElementsByClassName('line');
-    if(lines.length) {
+    if (lines.length) {
       for (let i = 0; i < lines.length; i++) {
-          document.body.removeChild(lines[i]);
+          screen.removeChild(lines[i]);
       }
     }
     
-    for(let i = 0; i < getHeight()/10; i++){
+    for (let i = 0; i < getHeight(screen)/10; i++){
       const line = document.createElement("div");
-      const screen = document.getElementsByClassName('screen');
-      console.log(screen);
       line.className = `line line-${i}`;
       line.style.top = `${i * 10}px`;
       const time = Math.random() * 5;
       line.style.animation = `lines ${time}s infinite`;
-      // screen.append(line) ;
+      screen.appendChild(line) ;
     }
   }
 
@@ -35,10 +37,8 @@ const Landing = () => {
   };
 
   return (
-    <main 
-      className='landing-page' 
-      >
-        <div className='screen'>
+    <main className='landing-page'>
+        <div ref={containerRef} className='screen'>
           <p className='glitch'>WELCOME TO</p>
           <p className='glitch'>PETE CODES</p>
         </div>
