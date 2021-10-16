@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 
-const Card = () => {
+const Cards = () => {
 
   return (
     <article className='project-card'>
@@ -10,4 +10,4 @@ const Card = () => {
   )
 }
 
-export default Card;
+export default Cards;

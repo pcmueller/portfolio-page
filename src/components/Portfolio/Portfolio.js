@@ -1,6 +1,6 @@
 import React from 'react';
 import NavMenu from '../NavMenu/NavMenu';
-import Card from '../Card/Card';
+import Cards from '../Cards/Cards';
 
 const Portfolio = () => {
 
@@ -14,10 +14,7 @@ const Portfolio = () => {
       <section className='portfolio-container' id='page-wrap'>
         <h1 className='portfolio-title'>PORTFOLIO</h1>
         <article className='portfolio-section'>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
+          <Cards></Cards>
         </article>
       </section>
     </main>
