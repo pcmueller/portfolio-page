@@ -1,10 +1,9 @@
 import React from 'react';
 import NavMenu from '../NavMenu/NavMenu';
-// import { Link } from 'react-router-dom';
+import Card from '../Card/Card';
 
 const Portfolio = () => {
 
-  
 
   return (
     <main className='portfolio-page' id='outer-container'>
@@ -15,7 +14,10 @@ const Portfolio = () => {
       <section className='portfolio-container' id='page-wrap'>
         <h1 className='portfolio-title'>PORTFOLIO</h1>
         <article className='portfolio-section'>
-          project grid
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
         </article>
       </section>
     </main>
