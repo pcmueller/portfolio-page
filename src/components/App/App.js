@@ -8,7 +8,7 @@ const App = () => {
     <Router>
       <div className='app'>
         <Switch>
-          <Route exact path='/home'>
+          <Route exact path='/about'>
             <About/>
           </Route>
           <Route path='/'>

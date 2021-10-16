@@ -41,7 +41,7 @@ const Landing = () => {
     <main className='landing-page'>
         <div className='screen'>
           <p className='glitch'>WELCOME TO</p>
-          <Link to={`/home`} 
+          <Link to={`/about`} 
             className='enter-link'
           >
             <p className='glitch'>PETE CODES</p>
