@@ -14,12 +14,12 @@
   @include flex-center(column);
   width: 100%;
   height: 100%;
-  font-family: $bungee;
   font-weight: bold;
   font-style: italic;
   font-size: 60px; // use for font size
 
   p:nth-child(1) {
+    font-family: $bungee-shade;
     color: rgb(41, 168, 252);
     font-size: 1em;
   }
@@ -29,6 +29,7 @@
   text-decoration: none;
   
   p.glitch {
+    font-family: $bungee;
     color: rgb(59, 252, 41);
     font-size: 2em;
     margin-top: 20px;

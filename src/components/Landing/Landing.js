@@ -9,8 +9,8 @@ const Landing = () => {
   useEffect(drawLines, [current]);
 
   function getHeight(screen){
-    return screen.innerHeight
-      || screen.clientHeight;
+    return screen?.innerHeight
+      || screen?.clientHeight;
   }
 
   function drawLines() {
