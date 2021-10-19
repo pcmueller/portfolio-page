@@ -91,7 +91,7 @@ const RepoCard = ({ repo, language }) => {
             <React.Fragment>
               <span
                 className={classes.dot}
-                style={{ backgroundColor: language[repo.language]["color"] }}
+                // style={{ backgroundColor: language[repo.language]["color"] }}
               ></span>
               <Typography style={{ marginRight: "10px" }}>
                 {repo.language}

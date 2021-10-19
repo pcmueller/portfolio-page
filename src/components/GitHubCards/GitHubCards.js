@@ -1,57 +1,45 @@
-import React, { Component } from "react";
-import Axios from "axios";
-import baseURL from "../../utilities/github.js";
+import React, { useState, useEffect } from "react";
+import { fetchRepo } from "../../utilities/apiCalls.js";
 import RepoCard from "../RepoCard/RepoCard";
 import { Grid } from "@material-ui/core";
 
-class GitHubCards extends Component {
-  Title = [];
-  state = {
-    repo: [],
-    language: [],
-  };
+const GitHubCards = () => {
 
-  async componentDidMount() {
-    const api_key = process.env.REACT_APP_GITHUB_API_KEY;
+  const [ repoData, setRepoData ] = useState([]);
 
-    let repo = [
-      baseURL(`hookshot`),
-      baseURL(`the-wormhole`),
-      baseURL(`cyclorama`),
+  useEffect(() => {
+    const repoNames = [
+      'hookshot',
+      'the-wormhole',
+      'cyclorama',
     ];
 
-    await Axios.get("https://github-lang-deploy.herokuapp.com/").then(
-      async (res) => await this.setState({ language: res.data })
-    );
-    repo.map(
-      async (url) =>
-        await Axios.get(url, {
-          headers: {
-            Authorization: `token ${api_key}`,
-          },
-        }).then(async (res) => {
-          await this.setState({
-            repo: [...this.state.repo, res.data],
-          });
+    const getRepoData = (name) => {
+      fetchRepo(name)
+        .then(response => {
+          if (response) {
+            setRepoData(data => [ ...data, response ]);
+          }
         })
-    );
-  }
-  render() {
-    const { repo, language } = this.state;
-    repo.sort((a, b) =>
-      a.stargazers_count > b.stargazers_count
-        ? -1
-        : b.stargazers_count > a.stargazers_count
-        ? 1
-        : 0
-    );
-    return (
-      <Grid container spacing={1}>
-        {repo.map((data, i) => (
-          <RepoCard repo={data} key={i} language={language} />
-        ))}
-      </Grid>
-    );
-  }
+        .catch(error => {
+          console.log(error);
+      })
+    }
+    if (!repoData.length) {
+      repoNames.forEach(name => {
+        getRepoData(name);
+      })
+    }
+  }, [repoData.length]);
+
+  return (
+    // <></>
+    <Grid container spacing={1}>
+      {repoData?.map((data, i) => (
+        <RepoCard repo={data} key={i} language={"english"} />
+      ))}
+    </Grid>
+  );
 }
+
 export default GitHubCards;
