@@ -25,7 +25,10 @@
 }
 
 .portfolio-section {
-  @include flex-center(row);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
   width: 90%;
   margin-top: 30px;
   margin-bottom: 50px;

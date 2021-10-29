@@ -47,12 +47,12 @@ const Portfolio = () => {
       <div className='banner'>
         <img src='/images/canva-banner.png' alt='banner'/>
       </div>
-      <section className='portfolio-container' id='page-wrap'>
+      <div className='portfolio-container' id='page-wrap'>
         <h1 className='portfolio-title'>PORTFOLIO</h1>
-        <article className='portfolio-section'>
+        <section className='portfolio-section'>
           {repoCards}
-        </article>
-      </section>
+        </section>
+      </div>
     </main>
   )
 }
