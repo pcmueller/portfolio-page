@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: "0 16px 70px -12.125px rgba(0,0,0,0.3)",
     },
   },
-  tittle: {
+  title: {
     "&:active": {
       color: "#00008E",
     },
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const RepoCard = ({ repo, language }) => {
+const RepoCard = ({ repo }) => {
   const classes = useStyles();
   return (
     <Grid xs={12} sm={6} lg={3} className={classes.root}>
@@ -74,7 +74,7 @@ const RepoCard = ({ repo, language }) => {
                 href={repo.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={classes.tittle}
+                className={classes.title}
                 style={{ textDecoration: "none", color: "#551A8B" }}
               >
                 {repo.name}
@@ -91,7 +91,7 @@ const RepoCard = ({ repo, language }) => {
             <React.Fragment>
               <span
                 className={classes.dot}
-                // style={{ backgroundColor: language[repo.language]["color"] }}
+                style={{ backgroundColor: "#5ce1e6" }}
               ></span>
               <Typography style={{ marginRight: "10px" }}>
                 {repo.language}
